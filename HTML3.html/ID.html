@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* in that situation the text will be blue because it will ignore the class 
+        and just check the ID */
+        #firstParag{
+            color: blue;
+        }
+        .dark{
+            color: brown;
+        }
+        .Monday{
+         color: black;
+        }
+        .Tuesday{
+            background-color: chocolate;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- <p id "firstpage"> 
+    
+        akjsgahndsjcgbndavcbdnjbv
+        sjhdh
+    </p> -->
+
+    <!-- <p id="firstpage2"> lygwhjfu giyuewgfiu iygweuifg </p> -->
+    <!-- ID  is most specific one if tag has a ID and Class then code will read ID first and ignore teh CLASS -->
+
+    <P class="dark" id="firstParag">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, mollitia?
+</P>
+
+<!-- if we use two saparate name as class name
+in CSS  we can call it in two differnt ways
+we can call as Mndan and Tuesday separetly. 
+just did in style above this html file. -->
+<p class="Monday Tuesday">
+
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, ipsum.
+</p>
+</body>
+</html>

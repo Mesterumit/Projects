@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!-- in order to create a table 
+
+            we need a <table> tag then we need a <thead> which is  used for title of table 
+                then we add row with <tr> , so title should be bold in order to be we use <th> 
+
+                    the we make <tbody> in order to fill out rows
+                        there is no colum tag in HTML. Because of tha w ehave to add <tr> to each colum
+                            <td> is used for filling out in rows
+
+
+         -->
+        <table  border="1">
+            <thead>
+                <tr>
+                    <th >Day</th>
+                    <th colspan="2">Lesson 1</th>
+                    <th >Lesson 2</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <tr>
+
+                <td>Monday</td>
+                <td colspan="3" >Git</td>
+
+            </tr>
+
+            <tr>
+                <td>Tuesday</td>
+                <td rowspan="2" colspan="2">Linux 2</td>
+            </tr>
+
+            <tr>
+                <td>Wednasday</td>
+                <!-- <td rowspan="2">Html 1</td> -->
+               
+            </tr>
+
+            <tr>
+                <td>Thursday</td>
+                <!-- <td rowspan="2">Html 2</td> -->
+                <td colspan="2" rowspan="2" >HTML2</td>
+                <td rowspan="2">CSS</td>
+                
+            </tr>
+
+            <tr>
+                <td>Friday</td>
+                
+            </tr>
+        
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>Week one complete</td>
+                 <td>HTML complete</td>
+                </tr>
+            </tfoot>
+
+
+
+
+        </table>
+    </div>
+</body>
+</html>

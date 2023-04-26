@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block line and Inline Elements</title>
+    
+
+    <style>
+        /* it is only affect the block element which is "p" */
+        #space {
+            height: 200px;
+        }
+
+        /* even we change height in inline element which is "span". it is not gonna affected. 
+it is only affect the block element which is "p" */
+        #space-span {
+            height: 100px;
+            font-size: 100px;
+        }
+
+        div {
+            height: 100px;
+            background-color: blue;
+            color: chartreuse;
+        }
+
+        ul {
+            background-color: brown;
+
+
+        }
+
+        /* cursor is when u hover it it the mouse sign  is change into hang sign */
+        ol {
+            background-color: yellowgreen;
+            cursor: pointer;
+        }
+
+        header {
+            background-color: violet;
+        }
+
+        section {
+            background-color: turquoise;
+        }
+        .element{
+            background-color: chocolate;
+            color: blue;
+        }
+        p{
+            background-color: turquoise;
+        }
+        span{
+            background-color: brown;
+        }
+       
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, odio! </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi corrupti ea nesciunt.
+    </p>
+
+
+    <!-- when we use span then sentence will be printed next to easch other such as
+    
+    Lorem ipsum dolor sit amet.HI!!
+    -->
+    <span>Lorem ipsum dolor sit amet.</span>
+    <span>HI!!</span>
+
+    <p id="space">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima assumenda perferendis iste ratione!
+    </p>
+
+    <span id="space-span">Lorem ipsum dolor sit amet.</span>
+    <span>Hi!!</span>
+
+    <h2 class="element">BLOCK ELEMENTS</h2>
+
+    <div>DIV -Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+
+    <P> P - Lorem ipsum dolor sit amet.</P>
+
+    <UL>
+        <li>Lorem</li>
+        <li>Test</li>
+        <li>More</li>
+    </UL>
+
+    <ol>
+        <li>umit</li>
+        <li>Test</li>
+        <li>more</li>
+    </ol>
+
+    <header> header - Lorem ipsum dolor sit amet.</header>
+    <section> section - Lorem ipsum dolor sit amet.</section>
+
+    <!-- h1 - h6 -->
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <hr>
+    <h3>Heading 3</h3>
+    <h4>Heafing 4</h4>
+    <hr>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <div>
+        <h2>Test div</h2>
+        <p>Test div from p.</p>
+    </div>
+<!-- FOR section element, it has to has a head "h1,h2..." because blind people can understand easly
+Otherthan that it is same as div.
+-->
+    <section>
+        <h2 class="element"> INLINE Elements</h2>
+    </section>
+
+    <!-- because img is inline elements these two images will  stand next to next 
+    alt = it is explanatiocn of image if image wont open so blind people can 
+    read the image description by reader app
+               -->
+    <img 
+    src="eagle.png" 
+    alt="" width="200px" 
+    height="150px" 
+    border="4"/> 
+    
+    <img 
+    src="eagle.png" 
+    alt="" width="200px" 
+    height="150px" 
+    border="5"/>
+
+
+    <!-- a is anchore for link add 
+    target is after u click on the link it opens in new borwoser if you use "_blank"
+     if you use "self"  then it is open in the same page -->
+    <a href="https://google.com" target="_blank" >Go to the google</a>
+
+    <!-- link in image -->
+
+    <a href="https://google.com">
+    <img src="eagle.png" alt="_blank">
+</a>
+
+
+<!-- if we add id suc as "go-to-top-link"  and in style open "html" class
+and chose the "scrool behaviour="smooth" then page will go up smotthly when you click the link  -->
+<a href="#top" id="go-to-top-link">Go to top</a>
+</body>
+
+</html>

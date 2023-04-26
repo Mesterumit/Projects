@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table, th, td{
+/*  you can padding in th and td not in table so
+I just put it in here but next time , i should put in th,td */
+            border: 1px solid black;
+             border-collapse: collapse ;
+           padding-left: 20px;
+        }
+        table{
+            width: 100%;
+            height: 25vh;
+            
+        }
+        .Umit{
+            background-color: green;
+        }
+        th:hover{
+            background-color: brown;
+        }
+        .first:hover{
+            background-color: blueviolet;
+            
+
+        }
+        .second:hover{
+            background-color: chartreuse;
+        }
+        .third:hover{
+            background-color: tomato;
+            
+        }
+        th{
+            height: 8vh;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+<h1>Class List</h1>
+    <table>
+        <thead class="Umit">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+        </thead>
+
+        <tr class="first">
+            <td>Jhon</td>
+            <td>Smith</td>
+            <td>+45639862394</td>
+        </tr>
+
+        <tr class="second">
+            <td>Adam</td>
+            <td>Elton</td>
+            <td>+98624769875</td>
+        </tr>
+
+        <tr class="third">
+            <td>Ken</td>
+            <td>Senial</td>
+            <td>+897829465</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divs</title>
+​
+    <!-- style tag allows us to type CSS inside our html file
+        Ony do this for testing as it is not a best practice!
+    -->
+    <style>
+        #navigation{
+            background-color: rgb(166, 135, 194) ;
+        }
+​
+        ul{
+            list-style:none;
+            display: flex;
+            justify-content: center;
+        }
+​
+        li{
+            margin: 25px;
+        }
+​
+        #banner{
+            text-align:center;
+        }
+​
+        #main{
+            padding: 50px;
+            background-color:rgb(163, 180, 195);
+        }
+​
+        #main p{
+            margin-top:100px;
+        }
+    </style>
+​
+</head>
+<body>
+    <!-- navigation: -->
+    <div id="navigation">
+        <nav>
+            <ul>
+                <li style="background-color: pink;">
+                    <!-- link: -->
+                    <a href="http://www.google.com">
+                        GOOGLE
+                    </a>
+                </li>
+​
+                <li><a href="http://www.google.com">GOOGLE</a></li>
+                <li><a href="http://www.google.com">GOOGLE</a></li>
+                <li><a href="http://www.google.com">GOOGLE</a></li>
+            </ul>
+        </nav>
+    </div>
+​
+    <!-- Banner: -->
+    <div id="banner">
+        <!-- banner here -->
+        <h1>Hello and welcome to my website.</h1>
+    </div>
+​
+    <!-- MAIN: -->
+    <div id="main">
+        <!-- main website content -->
+        <p>This is the internet puppy:</p>
+        <img src="https://www.banfield.com/-/media/Project/Banfield/Main/en/Wellness_at_Banfield/Puppy_Hub/Puppy_Hub_0-3_Months/0992_01_4x3L.jpg" alt="puppy" width="100%">
+        <br>
+        <!-- <b> make the saved word bold -->
+        <p>This is the <b>saved</b> puppy:</p>
+        
+        <!---------------------- IMAGE AS A LINK ---------------------------->
+        <!-- Created an anchor element, set the href to rickroll video -->
+        <!-- target="_blank" attribute and value will open the link in a new tab -->
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <!-- nested an image element to set the content of the anchor element to be a whole image elment -->
+            <img src="puppy.jpg" alt="puppy2" width="100%">
+        </a>
+        
+        <br>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil quis ea ut beatae? Et vero itaque molestias repellendus, mollitia aliquid?</p>
+    </div>
+</body>
+</html>
