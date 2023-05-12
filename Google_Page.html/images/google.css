@@ -1,0 +1,180 @@
+header{
+    padding: 10px;
+}
+
+ul{
+     /* this remove the "underline and dot" */
+    list-style-type: none; 
+  
+    
+}
+li{
+    display: inline;
+    padding: 5px;
+    
+    
+    
+}
+a{
+    /* this remove the underline from 
+    text */
+    text-decoration: none;
+   
+}
+a:hover{
+    /* this one gives the underline
+    when u hover the mouse over */
+    text-decoration: underline;
+}
+.floatLeft{
+    float: left;
+
+}
+ .floatRight{
+float: right;
+ }
+ #appicon{
+     opacity : 0.5;
+ }
+ #appicon:hover{
+     opacity: 1;
+
+ }
+ #singIn{
+     background-color: blue;
+     color: white;
+     padding: 5px;
+     border: none;
+     border-radius: 3px;
+
+
+ }
+ #logo{
+     display: block;
+     margin-left: 40%;
+     margin-top: 25%;
+     clear: both;
+ }
+ #searchbar{
+     /* display: block; */
+     width: 500px;
+     height: 40px;
+     border: 1px solid gray;
+     margin: auto;
+     /* margin-top: 10px; */
+     border-radius: 20px;
+
+ }
+ #searchbar > input{
+    border: none;
+    border-radius: 30px;
+    width: 300px;
+    height: 24px;
+    margin: auto;
+    margin-top: 0%;
+    /* margin-bottom: 10px; */
+    padding-top: 15px;
+   
+}
+/* ask that ? it doesnt wok */
+#searchbar:hover{
+    box-shadow: 0px 3px 9px gray;
+}
+  
+ #mic{
+     display: inline;
+     width: 20px;
+     height: 20px;
+     float: right;
+     margin-top :8px;
+     margin-right: 10px;
+ }
+ #search{
+    margin-top :8px;
+    margin-left: 10px;
+ }
+ #mainButtons{
+     display: block;
+     text-align: center;
+     margin-top: 50px;
+     /* width: 50%;
+     height: 50%; */
+     padding: 10px;
+ }
+ #googleSearch{
+     background-color: rgba(253, 253, 253, 0.84);
+   cursor: pointer;
+    padding: 20px;
+    border: none;
+ }
+ #feelingLucky{
+    background-color: rgba(253, 253, 253, 0.84);
+
+   cursor: pointer;
+    padding: 20px;
+    border: none;
+ }
+ #googleSearch:hover, #feelingLucky:hover{
+     border: 1px solid gray;
+ }
+ #languages{
+     text-align:center;
+ }
+ #languages > a{
+     cursor: pointer;
+     color: blue;
+ }
+ footer{
+     background-color: rgb(182, 182, 182);
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     
+     
+ }
+ footer > div{
+height: 50px;
+
+ }
+
+ #footerbuttom{
+     display: block;
+     /* height: 50px; */
+    
+    padding: 25px;
+ 
+ }
+ #footerbuttom > p{
+     padding: 15px;
+     /* margin-top: 30px; */
+     font-size: 20px;
+     
+     
+     
+ }
+ #country{
+     padding: 25px;
+     
+     
+   
+ }
+ hr{
+     background-color: rgb(182, 182, 182);
+ }
+ #country > p{
+     margin-top: 50px;
+     font-size: 20px;
+     
+ }
+
+
+
+
+
+ 
+    
+
+
+
+
+
