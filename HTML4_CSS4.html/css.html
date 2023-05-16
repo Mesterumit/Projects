@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 1</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CASCADING ORDRE -->
+    <!-- 1. INLINE STYLE -->
+    <!-- 2. internal STYLE -->
+    <!-- 3. external STYLE -->
+
+    <!-- Specifitity -->
+    <!--1. inline styles  -->
+    <!--2. ID  -->
+    <!--3. Class  -->
+    <!-- 4. Elements -->
+
+    <!-- internal style -->
+    <style>
+        h1 {
+            color: blue;
+            font-size: 70px;
+            text-align: center;
+
+        }
+
+        /* if you style in here and inside style togather then it will read the inside one */
+        p {
+            color: rgb(255, 0, 195);
+
+        }
+        *{
+    text-shadow:2px 2px 2px rgb(10, 212, 91);
+    margin: 10%;
+    padding: 5%;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+
+    <!-- insline styles -->
+    <p style="color: blue; font-size: 24px;  text-align: center;">I am Umit</p>
+    <p>it is another exam to show the different from inline and internal style</p>
+
+    <p id="id">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, labore?</p>
+
+    <p class="class"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus adipisci nulla natus.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+h1 {
+    color: red;
+}
+
+#id {
+    color: aqua;
+    font-size: 70px;
+    text-align: center;
+
+}
+
+.class {
+    color: crimson;
+    font-size: 70px;
+    text-align: center;
+
+}
+
+/* this change all of the html elements */
+/* * {
+    text-shadow: tomato;
+} */

@@ -1,0 +1,33 @@
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+
+}
+td{
+    border: 1px solid rgb(207, 17, 17);
+    padding: 5px;
+    margin: 5px;
+    /* background-color: coral; */
+}
+tr:hover{
+    background-color: chartreuse;
+    
+}
+.blueBG{
+    background-color: rgb(201, 21, 33);
+}
+
+.aquaHover:hover{
+    background-color: aqua;
+}
+.blue{
+    color: rgb(51, 0, 255);
+}
+.font45{
+    font-size: 45;
+}
+.redBG{
+background-color: tomato;
+}
