@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widt, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* when we use that we dont need a line elemenets anymore in body
+         such as "br" */
+        body * {
+            /* it put the all elements in line
+            butun elementleri duzeltiyor alt alta  */
+            display: block;
+            /* butun elementler arasina 10px koyuyor */
+            margin: 10px;
+
+        }
+        form{
+            width: 400px;
+            
+            margin: auto;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="somephp.php" method="post">
+
+        <!-- laber attribute "for" should be same as input "ID"
+             and ttext elemet only take one line and shot sentence 
+            so if you add max for it then we can set the number of words for type section       -->
+        <label for="fname">First Name:</label>
+        <input id="'fname" type="text" maxlength="5">
+
+        <!-- when you cahange type attribute as"password" then when you type
+        the password it will only show the "dots"-->
+        <label for="password">Password:</label>
+        <input id="password" type="password">
+
+
+        <!-- input of type submit will the form and send our information to
+        our action with it's method -->
+
+        <!-- Whatever  we use for the value of the vale attribute is the text 
+            that will go inside our submit button.  -->
+        <input type="submit" value="Whatever">
+
+        <input type="reset" value="Reset" >
+        
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" >
+
+        <label for="Email">Email</label>
+        <input type="email" id="Email">
+
+        <label for="website">Website</label>
+        <input type="url" id="website">
+
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday">
+
+        <label for="color">Favorite Color</label>
+        <input type="color" id="color">
+
+
+
+    </form>
+
+
+    <form action="" method="post">
+        <label for="Uname">USERNAME</label>
+        <input id="Uname" type="text" maxlength="5" >
+
+        <label for="Password">Password</label>
+        <input type="password">
+
+        <label for="securiy code">SECURIY CODE</label>
+        <input type="password">
+
+        <!-- used submit for "save" because we dont' have other option to use fro "save"
+        
+          and we add style="inline" in order to put save and reset button next to eachother  -->
+        <input  style="display: inline;" type="submit" value="SAVE">
+        <input style="display: inline;" type="reset" value="RESET">
+
+
+
+    </form>
+</body>
+
+</html>
