@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            color: white;
+            background-color: red;
+        }
+        .bgBlue{
+            background-color: blue;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 id="main">Hi it is DOM</h1>
+        <h3 id="main">subheading</h3>
+        <p id="main">this is a paragraph</p>
+    </div>
+    <p id="example">
+        This paragraph has white spaces    and has <span>a span element</span>
+    </p>
+    <div id="header">
+        <h3 id="title">Full Stack</h3>
+    </div>
+   
+    <button id="button" class="bgBlue">remove name</button>
+
+    <ul id="list">
+        <li>Apple $<span>2.5</span></li>
+        <li>Pear $<span>3</span></li>
+        <li>Banana $<span>1.5</span></li>
+        <li>Grapes $<span>2</span></li>
+    </ul>
+    <script>
+        //adding new element into existing list
+        const element = document.getElementById('list')
+        const new1 = document.createElement('li')
+        new1.innerHTML = `Cherry $<span>5</span> `
+        element.appendChild(new1)
+
+
+        // if you have a same id name
+        // it will change tha first elemnt that match with id name
+        const main = document.getElementById('main');
+        //  main.innerHTML ='Whatever content i choose'
+         main.style.backgroundColor = "green";
+         main.style.fontSize = '30px';
+         
+         // Query will pick the first element its found in html
+         const h1= document.querySelector("#h1");
+
+         // difference between innerHTML, innerText, and textContent
+         // innerHtml: retuns the HTML content of element
+         // innerText : returns the text content of an element
+         // textContent : returns the text content of an element
+         console.log(document.querySelector('#example').innerHTML+ ":innerHTML")
+         console.log(document.querySelector('#example').innerText+ ":innerText")
+         console.log(document.querySelector('#example').textContent+ ":textContent")
+        
+         // cahnging the text in html  by id 
+        document.getElementById("title").innerText ="Clarusway"
+         // you can add html tag insted of addin only text
+         document.getElementById("title").innerHTML ="<p> it is innerHTML adding </p>"
+          
+
+        // create a click event listener:
+        // this an event listener that for a click event on the button with ID 'button'
+        // document.querySelector("#button").addEventListener('click', function(){
+        //     document.querySelector('#main').remove()
+        // });
+       
+       // this is alos a click event listener to an element
+
+       let button = document.querySelector('#button');
+
+       button.onclick = function(){
+        document.querySelector("#main").remove()
+       }
+  
+       // ACCESSING AND CHANGING STYLES:
+       // element.attributes - returns a live collection of all attributes of an elemet
+       // element.classList - returns a live collection of all classes of an element
+           // classList.add - adds a class to an element
+           // classList.remove - removes the class name of an element
+       // element.className - returns the class name of an element
+       // element.setAttribute() - sets an attributes of an element
+       // element.style  - returns the inline style of an element 
+       
+       
+       // log the button attributes to the console:
+       console.log(button.attributes)
+       button.classList.add('AddingClass')
+             
+       // log the classlist of the button
+       console.log(button.classList);
+       button.classList.remove('AddingClass')
+       console.log(button.classList)
+
+       // if you want to get a value 
+       console.log(button.id)
+
+       // set an Attribute:
+       button.setAttribute('name','button')
+
+       document.querySelector("#header").style.backgroundColor = "orange";
+       document.querySelector("#title").style.color ="white"
+
+       // document.write() 
+       // writes directly to body, and goes to bottom of the body
+       document.write("this goes to body")
+    </script>
+</body>
+
+</html>

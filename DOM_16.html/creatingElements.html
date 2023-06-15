@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data =[
+            {
+              imgSrc:'rainbowcat.jpg',
+              headingVal:'Rainbow Cat',
+              pVal : 'This is a rainbow cat'
+            },
+            { imgSrc:'rainbowcat.jpg',
+              headingVal:'Rainbow Cat 2',
+              pVal : 'This is a rainbow cat 2'
+            },
+            {
+                imgSrc:'probably.jpg',
+                headingVal :'You can do it, probably',
+                pVal:'just kidding, you got this'
+            }
+     
+            
+        ]
+        // bacground color is changin in body
+        document.body.style.backgroundColor = "gray";
+        // CREATE CONTAINER DIV:    
+        // const main= document.createElement('div');
+        //  main.classList.add('main');
+        //  document.body.appendChild(main)
+        //  main.style.textAlign = 'center'
+        //  main.style.width = "50vw";
+        //  main.style.margin = "0 auto";
+        //  main.style.paddding = '1rem';
+        //  main.style.borderRadius = "1rem";
+        //  main.style.backgroundColor= "white";
+        //  main.style.border ="1px solid black"
+
+
+         
+
+        //  create a image
+        //  const img = document.createElement('img')
+        //  img.src = "rainbowcat.jpg"
+        //  main.appendChild(img);
+        //  img.style.width ='100%';
+
+        //  img.style.paddding='5rem'
+        // //  main.style.margin='5rem'
+        //  main.appendChild(img);
+        //  img.style.width="100%";
+
+        //  create heading
+        //  const heading = document.createElement('h1');
+        //  heading.innerText ="Rainbow Cat"
+
+        //  main.appendChild(heading)
+
+        //  create  paragraph
+
+        //  const paragraph = document.createElement('p')
+        //  paragraph.innerText ='This is a rainbow cat';
+        //  paragraph.style.fontFamily ='sans-serif';
+        //  paragraph.style.fontSize ='1.5rem';
+        //  paragraph.style.forntWeight ='bold'
+        //  paragraph.style.color ="gray";
+        //  main.appendChild(paragraph)
+
+
+         function makeCard(imgSrc, headingVal, pVal ){
+
+            const card = document.createElement('div');
+            card.style.width ='50vw';
+            card.style.margin ='5px auto';
+            card.style.padding ='1rem';
+            card.style.borderRadius= '1rem';
+            card.style.backgroundColor ='white';
+            card.style.border ='1px solid black';
+            
+
+            const img = document.createElement('img');
+            img.src = imgSrc
+            card.appendChild(img);
+            img.style.width ='100%';
+
+
+            const heading = document.createElement('h1');
+            heading.innerText = headingVal;
+            card.appendChild(heading);
+
+            const paragraph = document.createElement('p');
+            paragraph.innerText = pVal;
+            paragraph.style.fontFamily ='sans-serif';
+            paragraph.style.fontSize='1.5rem';
+            paragraph.style.color ='gray';
+            paragraph.style.forntWeight='bold';
+            card.appendChild(paragraph);
+
+            return card;
+
+         }
+
+      // loop through data , and render one card for each object in teh array
+
+        for(let i=0; i<data.length; i++){
+           const sm = makeCard(data[i]. imgSrc, data[i].headingVal, data[i].pVal)
+           document.body.appendChild(sm)
+        }
+
+      // another way of doing it 
+      // const card1 = makeCard('rainbowcat.jpg','Rainbow Cat','This is a rainbow cat')
+       // document.body.appendChild(card1)
+
+
+
+
+    </script>
+</body>
+</html>

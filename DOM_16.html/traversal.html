@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM TRAVERSAL</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Oranges</li>
+        <li>Strawberries</li>
+    </ul>
+
+    <ul id="list2">
+        <li>Apple $<span>2.5</span></li>
+        <li>Banana $<span>2.5</span></li>
+        <li>Pear  $<span>2.5</span></li>
+        <li>Grapes $<span>2.5</span></li>
+    </ul>
+
+    <script>
+        // dom traveersal methods
+
+        
+        // parentElement
+        // childNodes
+        // children
+        // firstChild
+        
+        // lastChild
+        
+        // nextSiblin
+       
+        // previousSibling
+
+        // parentNode
+        // firstElementChild
+        // lastElementChild
+        // nextElementSibling
+        // previousElementSibling
+
+
+     // referensing the list 
+     const li = document.getElementById('list')
+     console.log(list.children)
+     // in that way you can change the color of the first element of the list
+     const apples = list.firstElementChild;
+     apples.style.color = "red";
+     // chamging parent background color
+     apples.parentNode.style.backgroundColor ='gray'
+     apples.parentElement.style.backgroundColor ="yellow"
+
+     apples.nextElementSibling.style.color = 'red'
+
+     // get the last child of list
+
+     const strawberries = list.lastElementChild;
+     strawberries.style.color = "green"
+     strawberries.style.fontSize = "2rem"
+     strawberries.previousElementSibling.style.color ='pink'
+
+     // using query selector :
+     document.querySelector('li:nth-child(4)').style.backgroundColor ="gray"
+     document.querySelector('li:nth-child(2)').style.backgroundColor='white'
+
+     // in order to cahange more than one elemnt with querySelector
+     // we need to have a method 
+     // because it will be an array so we can't change the array with out 
+     // function
+
+     document.querySelectorAll('li:nth-child(even)').forEach(item =>{
+        item.style.backgroundColor ="lightgray"
+     })
+     
+
+     // LOPING OVER HTML COLLECTIONS
+
+     const spanElms = document.getElementsByTagName('span')
+     let sum =0;
+
+     for(let i=0; i<spanElms.length; i++){
+
+        sum += Number(spanElms[i].textContent)
+     }
+
+     const sum2 = document.createElement('h1')
+      sum2.innerText = `Total : $${sum.toFixed(0)}`
+      document.body.appendChild(sum2)
+
+    console.log(sum)
+
+
+
+    // Array.from() method returns an array from any iterable object
+    // outcome of this will be next to belloew eachother of single letter
+    // A
+    // B
+    // C ....
+    let text ='ABCDEFG'
+    const myArr = Array.from(text);
+    // ['A','B',....]
+
+    for(let i=0; i<myArr.length; i++){
+        let el = document.createElement('p');
+        el.innerText = myArr[i];
+        el.style.color ="red"
+        document.body.appendChild(el)
+    }
+
+     
+
+    </script>
+</body>
+</html>

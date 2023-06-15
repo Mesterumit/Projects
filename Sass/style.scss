@@ -1,0 +1,33 @@
+$main-color: green;
+$second-color: red;
+// partials are just rules that we store in other files
+// to import partial follow the syntaxh
+@import "partial";
+
+// mixins
+@mixin box($bg, $color){
+    background-color: $bg;
+    color: $color;
+    width: 50%;
+    height: 300px;
+    margin: auto;
+    padding: 10px;
+}
+h1{
+    
+    color: $main-color;
+}
+p{
+    color: black;
+}
+#mixin1{
+    @include box($main-color, $second-color  )
+}
+#mixin2{
+    @include box($second-color, $main-color  )
+}
+#mixin3{
+    @include box($main-color, $second-color  )
+}
+
+/* # sourceMappingURL=style.css.map */

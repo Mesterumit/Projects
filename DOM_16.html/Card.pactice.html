@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // random javascript to shorten syntax for ourselves
+        const $ = document.querySelector.bind(document);
+        const ce = document.createElement.bind(document);
+
+         const data =[
+            {
+              imgSrc:'rainbowcat.jpg',
+              headingVal:'Rainbow Cat',
+              pVal : 'This is a rainbow cat'
+            },
+            { imgSrc:'rainbowcat.jpg',
+              headingVal:'Rainbow Cat 2',
+              pVal : 'This is a rainbow cat 2'
+            },
+            {
+                imgSrc:'probably.jpg',
+                headingVal :'You can do it, probably',
+                pVal:'just kidding, you got this'
+            }
+     
+            
+        ]
+
+        const makeCard=(imgSrc,headingVal,pVal)=>{
+
+            // using our custom function
+            const first = ce('div')
+
+            first.style.width ='40vw';
+            first.style.margin='5px auto';
+            first.style.padding ='1rem';
+            first.style.border=' 1px solid blue';
+            first.style.borderRadius= '1rem';
+            first.style.backgroundColor="pink";
+
+
+            const im = document.createElement('img')
+            im.src= imgSrc;
+            first.appendChild(im)
+            im.style.width ='100%';
+
+            const h = document.createElement('h1')
+
+            h.innerText = headingVal;
+            h.style.color="blue"
+            h.style.textAlign="center";
+            first.appendChild(h)
+
+
+            const p1 =document.createElement('p')
+
+            p1.innerText = pVal;
+            p1.style.color="purple"
+            first.appendChild(p1)
+            
+
+            return first
+
+
+        }
+
+        for(let i=0; i<data.length; i++){
+            const newOne = makeCard(data[i].imgSrc, data[i].headingVal, data[i].pVal)
+            document.body.appendChild(newOne)
+        }
+
+    </script>
+</body>
+</html>
