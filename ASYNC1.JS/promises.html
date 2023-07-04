@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ 
+        <img id="heading" src="puppy.png" alt="">
+ 
+    <script>
+        //  this one will repeat the time in every one second
+        //  setInterval(function(){
+        //     console.log(new Date())
+        // },1000)
+
+
+        // aNOTHER EXAM
+
+        const heading = document.querySelector("#heading")
+        heading.style.position = "relative"
+        heading.style.transform = 'scale(1)'
+        heading.style.margin ='auto'
+
+        let position = 0;
+        let scale =1;
+        function fall() {
+            position += 1;
+         
+            scale +=1;
+            heading.style.transform = `scale(${scale})`
+
+            heading.style.top = position + "px"
+            
+        }
+
+        setInterval(fall, 2000)
+
+        // this one is another way of making the picture 
+        // bigger and falling the down of the screen
+
+        // setInterval(function(){
+        //     position += 1;
+         
+        //  scale +=1;
+        //  heading.style.transform = `scale(${scale})`
+
+        //  heading.style.top = position + "px"
+        // },2000)
+
+    </script>
+</body>
+</html>

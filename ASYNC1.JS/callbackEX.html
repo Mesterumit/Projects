@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function that just tells us the function was completed
+        function log(item){
+            console.log(item)
+        }
+
+        // first function that calls the log funciton when completed
+      function one (watever){
+        watever("it is a call back function")
+        console.log("it is a one function")
+        watever("it is the last time callback function is called")
+
+      }
+        one(log)
+
+        // callback hell:
+
+        // console.log("task1");
+
+        // setTimeout(function () {
+
+        //     console.log("task2");
+
+        //     setTimeout(function () {
+
+        //         console.log("task3");
+
+        //         setTimeout(function () {
+
+        //             console.log("task4");
+
+        //             setTimeout(function () {
+
+        //                 console.log("task5");
+        //             }, 1000);
+
+        //         }, 1000);
+
+        //     }, 1000);
+
+        // }, 1000);
+
+        // promises:
+        // task1()
+        // .then(task2())
+        // .then(task3())
+        // .then(task4())
+        // .then(task5())
+
+
+        
+    </script>
+</body>
+</html>

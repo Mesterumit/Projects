@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async practice</h1>
+
+    <script>
+
+        // these are two ways of using setTimeout
+        // to send the balocking code to browser 
+
+        //  function fn(){
+        //     console.log("do something")
+        // }
+
+        // setTimeout(fn, 5000)
+
+        // or
+        
+        // setTimeout(()=>{
+        //     console.log("do something")
+        // }, 5000)
+
+        //==============
+        //  console.log("timer started (task 1)")
+        // const start = new Date().getTime()
+        // let end = start
+        // const waitTime =  5000
+        // while(end < start + waitTime){
+        //     end = new Date().getTime()
+        // }
+        // console.log("timer ended (task 2)")
+
+        // console.log("next task3")
+        // console.log("next task4")
+        // console.log("next task5")
+
+
+        // solition 
+        console.log("timer started (task 1)")
+
+        setTimeout(()=>{
+            console.log("timer ended (task 2)")
+        },500)
+            
+        console.log("next task3")
+        console.log("next task4")
+        console.log("next task5")
+
+    </script>
+</body>
+</html>
