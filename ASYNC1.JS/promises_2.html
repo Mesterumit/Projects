@@ -14,42 +14,68 @@
     <h1 id="result"></h1>
 
     <script>
-          const result = document.querySelector("#result");
+const result = document.querySelector("#result");
 
-const p = (num1, num2) => {
-    // resolve = success/ reject = fail
-    // while a promise is incomplete, it is in a pending state
-    // once it is complete, it is either resolved or rejected
-    return new Promise((resolve, reject) => {
-        // reject("OKAY!")
-        if(num1 + num2 === 0){
-            resolve("ZERO")
-        }
-        else if ((num1 + num2) % 2 === 0) {
-            resolve("EVEN");
-        } else {
-            reject("ODD");
-        }
-    });
-};
+// const p = (num1, num2) => {
+//     // resolve = success/ reject = fail
+//     // while a promise is incomplete, it is in a pending state
+//     // once it is complete, it is either resolved or rejected
+//     return new Promise((resolve, reject) => {
+//         // reject("OKAY!")
+//         if(num1 + num2 === 0){
+//             resolve("ZERO")
+//         }
+//         else if ((num1 + num2) % 2 === 0) {
+//             resolve("EVEN");
+//         } else {
+//             reject("ODD");
+//         }
+//     });
+// };
 
-document.querySelector("#add").addEventListener("click", () => {
-    const num1 = Number(document.querySelector("#num1").value);
-    const num2 = Number(document.querySelector("#num2").value);
+// document.querySelector("#add").addEventListener("click", () => {
+//     const num1 = Number(document.querySelector("#num1").value);
+//     const num2 = Number(document.querySelector("#num2").value);
 
-    p(num1, num2)
-    // then is on success
-        .then((message) => {
-            result.innerText = "Result: " + message;
-            console.log("This is coming from the then: " + message);
-        }).then(console.log("success"))
-        // catch is on fail
-        .catch((message) => {
-            result.innerText = "Error: " + message;
-            console.log("This is coming from the catch: " + message);
-        });
-});
+//     p(num1, num2)
+//     // then is on success
+//         .then((message) => {
+//             result.innerText = "Result: " + message;
+//             console.log("This is coming from the then: " + message);
+//                  // if we don't wrap our console log inside of an anonymous function,
+//                 // it will run immediately, and not wait for the promise to resolve
+//         }).then(console.log("success"))
+//         // catch is on fail
+//         .catch((message) => {
+//             result.innerText = "Error: " + message;
+//             console.log("This is coming from the catch: " + message);
+//         });
+// });
      
+
+const p = (num1,num2) =>{
+    return new Promise((resolve,reject)=>{
+        if((num1+num2) %2 ==0 ){
+            resolve("even")
+        }else{
+            reject("odd")
+        }
+    })
+}
+
+document.querySelector("#add").addEventListener('click', ()=>{
+
+    const num1 = Number(document.querySelector("#num1").value);
+   const num2 = Number(document.querySelector("#num2").value);
+
+   p(num1,num2).then((mass)=>{
+    result.innerText = "Result :" +mass;
+    console.log("This is coming from the then: " + mass);
+   }).catch((messege)=>{
+    result.innerText = "Result :" +mass;
+    console.log("This is coming from the catch: " + mass);
+   })
+})
     </script>
     
 </body>

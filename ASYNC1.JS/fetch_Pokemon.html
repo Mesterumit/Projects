@@ -31,15 +31,17 @@
         .then(response => {
           if (!response.ok) {
             throw new Error('Failed to retrieve Pokémon data. Please check the name and try again.');
-          }
+           } 
           return response.json();
+       
         })
         .then(data => {
             console.log(data)
           const name = data.name;
           const imageUrl = data.sprites.front_default;
           const types = data.types.map(type => type.type.name);
-          const info = `Type(s): ${types.join(', ')}`;
+          const info = `Type(s): ${types.join(',')}`;
+          // const info = data.species.map(type => type.name)
 
           document.getElementById('pokemonName').textContent = name;
           document.getElementById('pokemonImage').src = imageUrl;

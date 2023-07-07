@@ -29,14 +29,14 @@
         function fall() {
             position += 1;
          
-            scale +=1;
-            heading.style.transform = `scale(${scale})`
+            // scale +=1;
+            // heading.style.transform = `scale(${scale})`
 
-            heading.style.top = position + "px"
+            heading.style.bottom = position + "px"
             
         }
 
-        setInterval(fall, 2000)
+        setInterval(fall, 200)
 
         // this one is another way of making the picture 
         // bigger and falling the down of the screen
