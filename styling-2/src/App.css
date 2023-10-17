@@ -1,0 +1,28 @@
+#main{
+    background-color : rgb(248, 246, 246);
+    font-size: 20px;
+    padding: 20px;
+    margin-top:20px;
+    margin-bottom:20px;
+    height : 100%;
+    width:  100%;
+    color : #555;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+    /* flex-wrap:wrap; */
+    border-radius:10px;
+
+
+
+}
+#people{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    width:80%;
+
+}
